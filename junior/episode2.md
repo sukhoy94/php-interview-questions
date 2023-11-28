@@ -40,3 +40,43 @@ header("Location: http://www.example.com", true, 301);
 ```
 
 
+### PHP Error and Exception Handling
+
+#### Error Handling
+
+#### Error Types
+- PHP has several error types:
+  - **Notices**: Minor issues, like undefined variables.
+  - **Warnings**: More severe, but don't stop script execution.
+  - **Fatal Errors**: Halt execution completely.
+
+#### Error Reporting
+- Use `error_reporting()` to control which errors are reported.
+- Options include reporting all errors (`E_ALL`), none (`0`), or specific types.
+
+#### Error Display
+- In development, display errors (`display_errors = On` in `php.ini`) for debugging.
+- In production, it's better to log errors to avoid revealing sensitive information.
+
+#### Custom Error Handlers
+- Custom error handling functions with `set_error_handler()`.
+- Allows defining custom responses to uncaught errors, like logging or sending to an error tracker.
+
+#### Exception Handling
+
+#### Exceptions
+- Introduced in PHP 5, exceptions handle special conditions requiring unique processing.
+
+#### Try-Catch Block
+- Place potentially exception-throwing code in a `try` block.
+- Catch and handle exceptions in a `catch` block.
+- Example:
+  ```php
+  try {
+      // Code that may throw an exception
+  } catch (Exception $e) {
+      // Code to handle the exception
+  }
+
+
+
